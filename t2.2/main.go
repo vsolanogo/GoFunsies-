@@ -7,12 +7,12 @@ import (
 )
 
 func main() {
-	fields := strings.Fields("1 9 3 4 -5")
-	length := len(fields)
+	input := strings.Fields("1 9 3 4 -5")
+	length := len(input)
 	var arr = make([]int, length, length)
 
 	for i := 0; i <= length-1; i++ {
-		arr[i], _ = strconv.Atoi(fields[i])
+		arr[i], _ = strconv.Atoi(input[i])
 	}
 
 	for i := 0; i < length-1; i++ {
@@ -32,6 +32,6 @@ func main() {
 	}
 	var minValue = arr[minIndex]
 
-	res := fmt.Sprintf("%d %d", maxValue, minValue)
-	fmt.Println(res)
+	result := fmt.Sprintf("%d %d", maxValue, minValue)
+	fmt.Println(result)
 }
